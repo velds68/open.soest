@@ -1,0 +1,22 @@
+/*
+ *
+ * Generic, non-design-token rules only.
+ * Have a more specific rule? Add it to the theme.
+ *
+ */
+
+html,
+body {
+  margin: 0;
+}
+
+.utrecht-link > svg {
+  margin-inline-end: var(--utrecht-icon-gap);
+}
+
+:root {
+  --open-catalogi-rating-font-family: Arial, sans-serif;
+  --open-catalogi-rating-font-size: var(--skeleton-size-md);
+  --open-catalogi-rating-rating-bar-color: green;
+  --open-catalogi-rating-rating-bar-background-color: #bfbfbf;
+}
