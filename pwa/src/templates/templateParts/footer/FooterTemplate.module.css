@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  max-inline-size: var(--utrecht-page-max-inline-size);
+  padding-inline-start: var(--utrecht-page-margin-inline-start);
+  padding-inline-end: var(--utrecht-page-margin-inline-end);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: var(--utrecht-page-footer-background-size);
+  background-position: var(--utrecht-page-footer-background-position);
+  min-height: var(--utrecht-page-footer-min-height);
+}
+
+.imageContainer {
+  height: var(--utrecht-page-footer-logo-max-height);
+  width: var(--utrecht-page-footer-logo-max-width);
+}
+
+.image {
+  vertical-align: middle;
+  margin-inline-end: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.image:hover {
+  cursor: pointer;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.withLoveConductionLink {
+  display: inline-block;
+}
+.withLoveConductionLink:hover {
+  margin-inline-start: 10px;
+}
+
+.withLoveLink:hover > :first-child {
+  transform: scale(1.2);
+}
+.withLoveLink > :first-child {
+  transition: all 1s;
+  transform-origin: 50% 50%;
+  margin-inline-end: unset;
+}
+
+.contentGrid {
+  gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dynamicSectionTitle {
+  margin-block-end: 18px;
+  color: inherit !important;
+}
+
+.dynamicSectionContent {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 8px;
+}
+
+.logoAndConduction {
+  margin-top: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media only screen and (max-width: 992px) {
+  /* Tablet */
+  .contentGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* Mobile */
+  .footer {
+    background-position: var(
+      --utrecht-page-footer-mobile-background-position,
+      var(--utrecht-page-footer-background-position)
+    );
+  }
+  .contentGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .imageContainer {
+    margin-block-end: 15px;
+  }
+
+  .logoAndConduction {
+    display: block;
+  }
+}

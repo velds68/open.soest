@@ -1,0 +1,40 @@
+.tableRow {
+  cursor: pointer;
+}
+
+.tableRow > * {
+  vertical-align: middle !important;
+}
+
+.componentsGrid {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cardContainer {
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  overflow-wrap: break-word;
+}
+
+.description {
+  color: var(--conduction-card-wrapper-color) !important;
+}
+
+@media only screen and (max-width: 992px) {
+  /* Tablet */
+  .componentsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 576px) {
+  /* Mobile */
+  .componentsGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
